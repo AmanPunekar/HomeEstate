@@ -3,12 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import {
   signInStart,
-  signInSucess,
+  signInSuccess,
   signInFailure,
 } from "../redux/user/userSlice";
 
 import OAuth from "../components/OAuth";
-
 
 export default function SignIn() {
   const [formData, setFormData] = useState({});
@@ -38,7 +37,7 @@ export default function SignIn() {
         dispatch(signInFailure(data.message));
         return;
       }
-      dispatch(signInSucess(data));
+      dispatch(signInSuccess(data));
       navigate("/");
     } catch (error) {
       dispatch(signInFailure(error.message));
@@ -69,7 +68,7 @@ export default function SignIn() {
         >
           {loading ? "Loading..." : "Sign In"}
         </button>
-      <OAuth/>
+        <OAuth />
       </form>
       <div className="flex gap-2 mt-5">
         <p>Dont have an account?</p>

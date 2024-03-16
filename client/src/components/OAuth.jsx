@@ -1,8 +1,7 @@
-import React from "react";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { app } from "../firebase";
 import { useDispatch } from "react-redux";
-import { signInSucess } from "../redux/user/userSlice";
+import { signInSuccess } from "../redux/user/userSlice";
 import { useNavigate } from "react-router-dom";
 
 export default function OAuth() {
@@ -14,6 +13,7 @@ export default function OAuth() {
       const auth = getAuth(app);
 
       const result = await signInWithPopup(auth, provider);
+
       const res = await fetch("/api/auth/google", {
         method: "POST",
         headers: {
@@ -25,11 +25,11 @@ export default function OAuth() {
           photo: result.user.photoURL,
         }),
       });
-      const data = await res.json;
-      dispatch(signInSucess(data));
+      const data = await res.json();
+      dispatch(signInSuccess(data));
       navigate("/");
     } catch (error) {
-      console.log("Could not sign in with Google", error);
+      console.log("could not sign in with google", error);
     }
   };
   return (
