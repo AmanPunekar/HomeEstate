@@ -18,11 +18,13 @@ export default function App() {
         <Route path="/sign-up" element={<SignUp />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route element={<PrivateRoute />}>
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/create-listing' element={<CreateListing />} />
-          <Route path='/update-listing' element={<UpdateListing />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/create-listing" element={<CreateListing />} />
+          <Route
+            path="/update-listing/:listingId"
+            element={<UpdateListing />}
+          />
         </Route>
-        
       </Routes>
     </BrowserRouter>
   );
