@@ -36,9 +36,15 @@ export default function OAuth() {
     <button
       onClick={handleGoogleClick}
       type="button"
-      className="bg-red-700 text-white p-3 rounded-lg uppercase hover:opacity-95"
+      className="p-2 border flex justify-center gap-2 border-slate-200 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-800 hover:border-slate-400 dark:hover:border-slate-500 hover:text-slate-900 dark:hover:text-slate-900 hover:shadow-md transition duration-150"
     >
-      Continue with google
+      <img
+        className="w-6 h-6"
+        src="https://www.svgrepo.com/show/475656/google-color.svg"
+        loading="lazy"
+        alt="google logo"
+      />
+      Continue with Google
     </button>
   );
 }

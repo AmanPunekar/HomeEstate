@@ -26,12 +26,12 @@ export default function Header() {
   }, [location.search]);
 
   return (
-    <header className="bg-slate-200 shadow-md">
+    <header className="bg-gray-800 shadow-md">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
         <Link to="/">
-          <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
-            <span className="text-slate-500">Home</span>
-            <span className="text-slate-700">Estate</span>
+          <h1 className="font-bold text-2xl sm:text-3xl flex flex-wrap">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 ">Home</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Estate</span>
           </h1>
         </Link>
         <form
@@ -41,7 +41,7 @@ export default function Header() {
           <input
             type="text"
             placeholder="Search..."
-            className="bg-transparent focus:outline-none w-24 sm:w-64"
+            className="bg-transparent focus:outline-none w-20 h-5 sm:w-64"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -49,14 +49,14 @@ export default function Header() {
             <FaSearch className="text-slate-600" />
           </button>
         </form>
-        <ul className="flex gap-4 ">
+        <ul className="flex gap-2 items-center">
           <Link to="/">
-            <li className="hidden sm:inline text-slate-700 hover:underline cursor-pointer">
+            <li className="hidden sm:inline text-white font-bold hover:text-gray-800 hover:bg-white py-2 px-3 mx-1 rounded-lg cursor-pointer">
               Home
             </li>
           </Link>
           <Link to="/about">
-            <li className="hidden sm:inline text-slate-700 hover:underline cursor-pointer">
+            <li className="hidden sm:inline text-white font-bold hover:text-gray-800 hover:bg-white py-2 px-3 mx-1 rounded-lg cursor-pointer">
               About
             </li>
           </Link>
@@ -68,7 +68,9 @@ export default function Header() {
                 alt="profile"
               />
             ) : (
-              <li className=" text-slate-700 hover:underline"> Sign in</li>
+              <li className="mx-1 px-3 py-2 font-bold bg-white text-gray-800 rounded-lg hover:bg-gray-200">
+                Sign in
+              </li>
             )}
           </Link>
         </ul>
