@@ -29,7 +29,7 @@ export default function Header() {
     <header className="bg-gray-800 shadow-md">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
         <Link to="/">
-          <h1 className="font-bold text-2xl sm:text-3xl flex flex-wrap">
+          <h1 className="font-bold text-xl sm:text-3xl flex flex-wrap">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 ">Home</span>
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Estate</span>
           </h1>
@@ -57,7 +57,12 @@ export default function Header() {
           </Link>
           <Link to="/about">
             <li className="hidden sm:inline text-white font-bold hover:text-gray-800 hover:bg-white py-2 px-3 mx-1 rounded-lg cursor-pointer">
-              About
+              About Us
+            </li>
+          </Link>
+          <Link to="/testimonials">
+            <li className="hidden sm:inline text-white font-bold hover:text-gray-800 hover:bg-white py-2 px-3 mx-1 rounded-lg cursor-pointer">
+              Testimonials
             </li>
           </Link>
           <Link to="/profile">
