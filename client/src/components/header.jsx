@@ -57,7 +57,7 @@ export default function Header() {
           </Link>
           <Link to="/about">
             <li className="hidden sm:inline text-white font-bold hover:text-gray-800 hover:bg-white py-2 px-3 mx-1 rounded-lg cursor-pointer">
-              About Us
+              About
             </li>
           </Link>
           <Link to="/testimonials">
